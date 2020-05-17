@@ -1,0 +1,118 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+{% if form != None %}
+    <br />
+    <h2>Пожалуйста, ответьте на несколько вопросов</h2>
+    <br />
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            <label for="{{ form.name.id_for_label }}">{{ form.name.label }}</label>
+            {{ form.name }}
+            <br /><br />
+            <label for="{{ form.gender.id_for_label }}">{{ form.gender.label }}</label>
+            {{ form.gender }}
+            <br />
+            <label for="{{ form.age.id_for_label }}">{{ form.age.label }}</label>
+            <p id="age">{{ form.age }}</p>
+            <br /><br />
+            <label for="{{ form.conven.id_for_label }}">{{ form.conven.label }}</label>
+            {{ form.conven }}
+            <br /><br />
+            <label for="{{ form.mark.id_for_label }}">{{ form.mark.label }}</label>
+            {{ form.mark }}
+            <br /><br />
+            <label for="{{ form.missect.id_for_label }}">{{ form.missect.label }}</label>
+            <p id="missect">{{ form.missect }}</p>
+            <br /><br />
+            <label for="{{ form.howfind.id_for_label }}">{{ form.howfind.label }}</label>
+            {{ form.howfind }}
+            <br />
+            <label for="{{ form.mind.id_for_label }}">{{ form.mind.label }}</label>
+            <br />
+            <p id="mind">{{ form.mind }}</p>
+            <br /><br />
+            <input id="sbmt" type="submit" value="   OK   ">
+        </form>
+    </div>
+{% else %}
+    <br /><h2>Спасибо, что помогаете нам стать лучше!</h2>
+    <h3>Ваши ответы на вопросы анкеты:</h3>
+    <ul>
+        <li><span>Имя:</span> {{ data.name }} </li>
+        <li><span>Пол:</span> {{ data.gender }} </li>
+        <li><span>Возраст:</span> {{ data.age }} </li>
+        <li><span>Удобство сайта:</span> {{ data.conven }} </li>
+        <li><span>Оценка сайту:</span> {{ data.mark }} </li>
+        <li><span>Нужен раздел:</span> {{ data.missect }} </li>
+        {% if data.howfind != '' %}
+        <li><span>Как нас нашли:</span> {{ data.howfind }} </li>
+        {% endif %}
+        {% if data.mind != '' %}
+        <li><span>Предложения по сайту:</span> {{ data.mind }} </li>
+        {% endif %}
+    </ul>
+{% endif %}
+
+<script>
+    function sbmt_mouseover() {
+        $('#sbmt').css('color', 'rgb(49, 151, 116)');
+    }
+    
+    function sbmt_mouseout() {
+        $('#sbmt').css('color', 'black');
+    }
+
+
+    function name_focus() {
+        $('#{{ form.name.id_for_label }}').css('background-color', 'LightCyan');
+    }
+    
+    function name_blur() {
+        $('#{{ form.name.id_for_label }}').css('background-color', 'White');
+    }
+
+    function age_focus() {
+        $('#{{ form.age.id_for_label }}').css('background-color', 'LightCyan');
+    }
+    
+    function age_blur() {
+        $('#{{ form.age.id_for_label }}').css('background-color', 'White');
+    }
+
+    function missect_focus() {
+        $('#{{ form.missect.id_for_label }}').css('background-color', 'LightCyan');
+    }
+    
+    function missect_blur() {
+        $('#{{ form.missect.id_for_label }}').css('background-color', 'White');
+    }
+
+    function mind_focus() {
+        $('#{{ form.mind.id_for_label }}').css('background-color', 'LightCyan');
+    }
+    
+    function mind_blur() {
+        $('#{{ form.mind.id_for_label }}').css('background-color', 'White');
+    }
+
+
+    $('#sbmt').mouseover(sbmt_mouseover);
+    $('#sbmt').mouseout(sbmt_mouseout);
+    $('#{{ form.name.id_for_label }}').focus(name_focus);
+    $('#{{ form.name.id_for_label }}').blur(name_blur);
+    $('#{{ form.age.id_for_label }}').focus(age_focus);
+    $('#{{ form.age.id_for_label }}').blur(age_blur);
+    $('#{{ form.missect.id_for_label }}').focus(missect_focus);
+    $('#{{ form.missect.id_for_label }}').blur(missect_blur);
+    $('#{{ form.mind.id_for_label }}').focus(mind_focus);
+    $('#{{ form.mind.id_for_label }}').blur(mind_blur);
+</script>
+
+
+{% endblock %}

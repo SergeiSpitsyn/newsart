@@ -1,0 +1,36 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+{% load staticfiles %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+
+    <div class="links-p">
+        <a href ="http://www.winzavod.ru/" target="_blank">
+            <img class="links-img" src="{% static 'app/content/links_logo_winzavod-ru.png' %}" width="320" alt="winzavod.ru logo"/>
+        </a>
+        <p class="links-inside-p">Центр современного искусства &laquo;<a href ="http://www.winzavod.ru/">Винзавод</a>&raquo; является первым и самым большим частным центром современного 
+        искусства в России, объединяющим галереи, образовательные программы, студии, мастерские и шоу-румы.</p>
+    </div>
+
+    <div class="links-p">
+        <a href ="http://www.theartnewspaper.ru/" target="_blank">
+            <img class="links-img" src="{% static 'app/content/links_logo_theartnewspaper-ru.png' %}" width="320" alt="theartnewspaper.ru logo"/>
+        </a>
+        <p class="links-inside-p">Газета, посвященная мировым новостям искусства. Задача &laquo;<a href ="http://www.theartnewspaper.ru/">The Art Newspaper Russia</a>&raquo; — освещение главных
+        новостей и важнейших событий, касающихся юридических, маркетинговых, политических и экономических 
+        аспектов художественной жизни.</p>
+    </div>
+    <div class="links-p">
+        <a href ="https://www.moma.org/" target="_blank">
+            <img class="links-img" src="{% static 'app/content/links_logo_moma-org.png' %}" width="320" alt="moma.org logo"/>
+        </a>
+        <p class="links-inside-p">Музей современного искусства в Нью-Йорке (&laquo;<a href ="https://www.moma.org/">MoMA</a>&raquo;) — один из первых и наиболее представительных музеев 
+        современного искусства в мире, послуживший эталоном для многих других собраний подобного рода.</p>
+    </div>
+
+
+{% endblock %}

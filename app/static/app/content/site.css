@@ -1,0 +1,183 @@
+body {
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+
+/* Following styles added by RickDalton: */
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    font-size: 48px;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.05em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: lighter;
+    line-height: 45px;
+}
+
+a:hover,
+a:focus {
+    color: #626c9f;
+}
+
+img {
+    margin: -2px 0 0 0;
+    vertical-align: middle;
+}
+
+p {
+    text-align: justify;
+}
+
+.block {
+    margin: 0px 0 12px 2px;
+}
+
+/* Styles for 'blog'/'blogpost' page: */
+.blogpost-img {
+    height: 200px;
+    display: block;
+}
+
+.posted-datetime {
+    color: #999;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.comment-author {
+    color: #2a5885;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.comment-datetime {
+    color: #999;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.blog-description-p {
+    text-align: justify;
+    font-family: Calibri;
+    font-size: 17px;
+}
+
+
+/* Styles for 'index' page: */
+.img-responsive {
+    max-width: 100%;
+}
+
+.slider-title-text {
+    font-size: 38px;
+    text-shadow: 0 0 0 black, 1px 1px 18px black;
+}
+
+.slider-description-text {
+    text-align: center;
+    text-shadow: 1px 1px 12px black, 1px 1px 8px black;
+}
+
+.index-text {
+    text-align: justify;
+    font-family: Calibri;
+    font-size: 17px;
+}
+
+#index-fig1 {
+    float: right;
+    padding: 7px;
+    margin: 0 0 0 2px;
+}
+
+#index-fig1 img {
+    width: 250px;
+}
+
+#index-fig1 figcaption {
+    text-align: center;
+    font-style: italic;
+    font-size: 11px;
+    width: 250px;
+    margin: 0 auto 0;
+}
+
+/* Styles for 'links' page: */
+.links-img {
+    float: left;
+    margin: 5px 14px 12px 0;
+}
+
+.links-p {
+    margin: 0 0 52px 0;
+}
+
+.links-inside-p {
+    margin: 2px 0 40px 2px;
+}
+
+/* Styles for 'about' page: */
+#banner {
+    text-align: center;
+}
+
+#banner img {
+    width: 89%;
+    margin: 20px 0 20px 0;
+}
+
+h3.about-sitename {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+.about-div-parent {
+    text-align: justify;
+}
+
+.about-div-child {
+    float: left;
+    margin: -19px 14px 1px 0;
+}

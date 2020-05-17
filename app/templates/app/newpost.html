@@ -1,0 +1,28 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+<br />
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="{{ blogform.title.id_for_label }}">{{ blogform.title.label }}</label>
+    {{ blogform.title }}<br /><br />
+    <label for="{{ blogform.posted.id_for_label }}">{{ blogform.posted.label }}</label>
+    {{ blogform.posted }}<br /><br />
+    <label for="{{ blogform.author.id_for_label }}">{{ blogform.author.label }}</label>
+    {{ blogform.author }}<br /><br />
+    <label for="{{ blogform.image.id_for_label }}">{{ blogform.image.label }}</label>
+    {{ blogform.image }}<br /><br />
+    <label for="{{ blogform.description.id_for_label }}">{{ blogform.description.label }}</label><br />
+    {{ blogform.description }}<br />
+    <label for="{{ blogform.content.id_for_label }}">{{ blogform.content.label }}</label><br />
+    {{ blogform.content }}
+    <br /><br />
+    <button type="submit" class="save btn btn-default"> Опубликовать статью </button>
+</form>
+
+
+{% endblock %}

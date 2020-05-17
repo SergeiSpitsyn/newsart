@@ -1,0 +1,20 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+<address>
+    NewsArt — новости современного искусства<br />
+    Санкт-Петербург, ул. Пестеля, д. 7<br />
+    <abbr title="Телефон для связи с редакцией">Телефон:</abbr>
+    +7 (911) 980-21-49
+</address>
+
+<address>
+    <strong>По вопросам размещения рекламы:</strong> <a href="mailto:adv@newsart.ru.com">adv@newsart.ru.com</a><br />
+    <strong>Техническая поддержка:</strong> <a href="mailto:support@newsart.ru.com">support@newsart.ru.com</a>
+</address>
+
+{% endblock %}

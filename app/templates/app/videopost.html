@@ -1,0 +1,27 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+<br />
+<div>
+    <h3>Академия Штиглица Intro</h3>
+    <video width="400" controls="controls" poster="/media/poster_1_-_stieglitz_academy.jpg">
+        <source src="/media/intro_1_-_stieglitz_academy.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+        Тип файла не поддерживается вашим браузером
+        <a href="/media/duel.mp4">Скачайте видео</a>
+    </video>
+</div>
+<hr />
+<div>
+    <h3>Что такое современное искусство Intro</h3>
+    <video width="400" controls="controls" poster="/media/poster_2_-_modern_art.jpg">
+        <source src="/media/intro_2_-_modern_art.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+        Тип файла не поддерживается вашим браузером
+        <a href="/media/duel.mp4">Скачайте видео</a>
+    </video>
+</div>
+
+
+{% endblock %}
